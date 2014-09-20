@@ -1,0 +1,25 @@
+Use a Ladder data structure. (see comments in rung.py, ladder.py, and edge.py)
+
+Solved this problem by checking all possible clue combinations for a given hand
+to see which combinations solved the Ladder.
+
+1. When a clue was given, the Edge that refers to that clue was "exposed"
+
+2. Rungs have to have 2 exposed Edges for it to be certain, else it is unkown
+	a. when all but one Rung for a given exposed Edge is certain. Then the last one
+	becomes certain by process of elimination.
+
+3. When all but one Rung in the Ladder is certain. Then the last one becomes certain
+		by process of elimination.
+
+4. Repeat 1-3 for each clue in a possible clue combination.
+
+5. When all rungs are certain then the ladder has been solved with that given clue set.
+
+6. Repeat 1-5 for all possible clue combinations and find one that solves the hand with
+	the least number of clues.
+
+The solution is successful. However, the run time is large when there is more than 8
+total unique colors and numbers in the given hand. This is probably due to the way I
+executed the solution, I believe that my solution could be optimized to reduce run
+time for the above case^.
